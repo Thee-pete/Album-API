@@ -80,7 +80,6 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
+production:
   <<: *default
-  database: vinyl_backend_production
-  username: vinyl_backend
-  password: <%= ENV["VINYL_BACKEND_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
